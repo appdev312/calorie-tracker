@@ -1,0 +1,45 @@
+<div class="row">
+	<div class="col s8 offset-s2 col m4 offset-m4">
+		{{!-- {{#link-to 'results' class="btn btn-primary btn-block btn-lg"}}
+			View Results
+		{{/link-to}} --}}
+		<button class="btn btn-block btn-lg btn-warning red darken-4" {{action 'hideResults'}}>Hide</button>
+	</div>
+</div>
+{{#if model.foodAdded.status}}
+<div class="row">
+	<div class="col s10 offset-s1">
+		<table class="table table-striped" id="todays-table">
+			<thead>
+				<th>Name</th>
+				<th>Calories (1 serving)</th>
+				<th>Remove from Today's Totals</th>
+			</thead>
+
+			<tbody>
+				{{!-- Use index to grab index of result --}}
+			{{#each model.items as |item index|}}
+				<tr class="item-row">
+					<td class="item-name">{{item.name}}</td>
+					<td class="calories">{{item.calories}}</td>
+					<td class="add-button">
+						{{!-- Pass index into addCalories action to grab correct item --}}
+						<button type="button" class="btn btn-add red darken-4" {{action 'removeItem' item index}}>Remove</button>
+					</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{{else}}
+<div class="row">
+	<div class="col s12 center-align">
+		<p class="lead">You haven't eaten anything today!</p>
+		<p>Search for a food and add it to today's totals to see it reflected here.</p>
+	</div>
+</div>
+{{/if}}
+
+{{outlet}}

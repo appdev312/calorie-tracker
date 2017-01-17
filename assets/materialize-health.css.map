@@ -1,0 +1,12 @@
+{
+	"version": 3,
+	"file": "materialize-health.css",
+	"sources": [
+		"../../sass_compiler-input_base_path-8KiC5oOb.tmp/0/app/styles/app.scss"
+	],
+	"sourcesContent": [
+		"// Global\r\n\r\nhtml, body {\r\n\theight: 100%;\r\n\tmargin: 0;\r\n\tpadding: 0;\r\n}\r\n\r\nh1 {\r\n\tfont-size: 3.5rem;\r\n}\r\n\r\nh2 {\r\n\tfont-size: 3rem;\r\n}\r\n\r\nh3 {\r\n\tfont-size: 2.5rem;\r\n}\r\n\r\nh4 {\r\n\tfont-size: 2rem;\r\n}\r\n\r\np {\r\n\tfont-size: 18px;\r\n}\r\n\r\n// Helpers\r\n\r\n.btn-block {\r\n\twidth: 100%;\r\n\tdisplay: block;\r\n}\r\n\r\n.lead {\r\n\tfont-weight: 500;\r\n}\r\n\r\n// Autofill BG Color on Chrome\r\n\r\ninput:-webkit-autofill {\r\n    -webkit-box-shadow: inset 0 0 0 1000px white !important;\r\n}"
+	],
+	"mappings": "AAEA,AAAA,IAAI,EAAE,AAAA,IAAI,CAAC;EACV,MAAM,EAAE,IAAK;EACb,MAAM,EAAE,CAAE;EACV,OAAO,EAAE,CAAE,GACX;;AAED,AAAA,EAAE,CAAC;EACF,SAAS,EAAE,MAAO,GAClB;;AAED,AAAA,EAAE,CAAC;EACF,SAAS,EAAE,IAAK,GAChB;;AAED,AAAA,EAAE,CAAC;EACF,SAAS,EAAE,MAAO,GAClB;;AAED,AAAA,EAAE,CAAC;EACF,SAAS,EAAE,IAAK,GAChB;;AAED,AAAA,CAAC,CAAC;EACD,SAAS,EAAE,IAAK,GAChB;;AAID,AAAA,UAAU,CAAC;EACV,KAAK,EAAE,IAAK;EACZ,OAAO,EAAE,KAAM,GACf;;AAED,AAAA,KAAK,CAAC;EACL,WAAW,EAAE,GAAI,GACjB;;AAID,AAAK,KAAA,AAAA,iBAAiB,CAAC;EACnB,kBAAkB,EAAE,mCAAoC,GAC3D",
+	"names": []
+}

@@ -1,0 +1,10 @@
+<div class="row">
+	<div class="col s12 center-align">
+		{{#each model as |calories|}}
+		<h2>{{calories.total}}</h2>
+		{{/each}}
+		<h3>Calories</h3>
+	</div>
+</div>
+
+{{yield}}

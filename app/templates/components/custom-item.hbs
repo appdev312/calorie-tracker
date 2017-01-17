@@ -1,0 +1,38 @@
+<div class="row">
+	<div class="col s8 offset-s2 col m4 offset-m4">
+		<a {{action 'openModal'}} type="submit" class="btn btn-block blue darken-4" href="custom-item-modal">Add Custom Item</a>
+	</div>
+</div>
+
+<!-- Modal Structure -->
+<div id="custom-item-modal" class="modal">
+	<div class="modal-content">
+	  <h4 class="center-align">Add Custom Item</h4>
+	  <form>
+	  	<div class="row">
+		  	<div class="input-field col s8 col offset-s2">
+		  		{{input action="getResults" id="custom-item-name" type="text" class="form-control" required=true}}
+		  		<label for="custom-item-name">Item Name</label>
+		  	</div>
+	  	</div>
+
+	  	<div class="row">
+		  	<div class="input-field col s4 col offset-s4">
+		  		{{input action="getResults" id="custom-item-calories" type="number" class="form-control" required=true}}
+		  		<label for="custom-item-calories">Calories:</label>
+		  	</div>
+	  	</div>
+
+	  	<div class="row">
+			<div class="col s8 offset-s2 col m4 offset-m4">
+				<a {{action 'createItem'}} type="submit" class="btn btn-block blue" href="custom-item-modal">Add</a>
+			</div>
+		</div>
+	  </form>
+	</div>
+	<div class="modal-footer">
+	  <a class="modal-action modal-close waves-effect waves-green btn-flat">Close</a>
+	</div>
+</div>
+
+{{yield}}

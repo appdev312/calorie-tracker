@@ -1,0 +1,40 @@
+<main>
+	<div class="container">
+
+		{{calorie-count model=model}}
+
+			<div class="row">
+				<div class="col s8 offset-s2 col m4 offset-m4">
+					<button type="button" class="btn btn-block btn-lg btn-info  blue darken-4"{{action 'viewTodaysFood'}}>View Today's Food</button>
+				</div>
+			</div>
+		<form onsubmit="return false">
+			<div class="row">
+				<div class="input-field col s12 col m8 offset-m2">
+					{{input action="getResults" id="food-search" type="text" class="form-control"}}
+					<label for="food-search">Search For Food</label>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col s8 offset-s2 col m4 offset-m4">
+					<button {{action 'getResults'}} type="submit" class="btn btn-block blue">Search</button>
+				</div>
+			</div>
+
+			{{custom-item model=model}}
+		</form>
+
+		{{#if model.searched}}
+			{{#if model.onAppRoute}}
+				<div class="row">
+					<div class="col s8 offset-s2 col m4 offset-m4">
+						<button class="btn btn-block blue darken-4" {{action 'viewResults'}}>View Search Results</button>
+					</div>
+				</div>
+			{{/if}}
+		{{/if}}
+
+		{{outlet}}
+	</div>
+</main>

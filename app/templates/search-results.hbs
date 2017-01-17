@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col s8 offset-s2 col m4 offset-m4">
+		<button class="btn btn-block red darken-4"{{action 'hideResults'}}>Hide Results</button>
+	</div>
+</div>
+
+<div class="row">
+	<div class="col s10 offset-s1">
+		<table class="table" id="results-table">
+			<thead>
+				<th>Name</th>
+				<th>Calories (1 serving)</th>
+				<th>Add to Daily Total</th>
+			</thead>
+
+			<tbody>
+				{{!-- Use index to grab index of result --}}
+			{{#each model.results as |result index|}}
+				<tr class="item-row">
+					<td class="item-name">{{result.fields.item_name}}</td>
+					<td class="calories">{{result.fields.nf_calories}}</td>
+					<td class="add-button">
+						{{!-- Pass index into addCalories action to grab correct item --}}
+						<button type="button" class="btn btn-add blue" {{action 'addCalories' index}}>Add</button>
+					</td>
+				</tr>
+			{{/each}}
+			</tbody>
+		</table>
+	</div>
+</div>
+
+{{outlet}}
